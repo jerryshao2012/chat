@@ -202,7 +202,7 @@ export default LoginForm
 
 Open the application in multiple windows and send a message in one window.All the other browser window should show the sent messages.
 
-
+![Demo](https://user-images.githubusercontent.com/1479717/194717492-e6b3092f-662a-41b3-a91c-c44cfdf9b299.gif)
 
 We are using SockJS to listen to the messages, which are sent from the server-side WebSocket.
 
