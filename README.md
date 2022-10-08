@@ -7,6 +7,7 @@ This project is just for learning purposes. It doesn't contain a production-read
 ## The Architecture Diagram of the Realtime Chat application
 To understand how the building blocks work, let's first take a look of the Architecture Diagram of the Realtime Chat application:
 
+![Chat Architecture Diagram](https://user-images.githubusercontent.com/1479717/194716524-528cd3df-68d5-4478-9cad-d04275dd0cc5.png)
 
 ## What is Kafka
 Apache Kafka is a widely popular distributed messaging system that provides a fast, distributed, highly scalable, highly available, publish-subscribe messaging system.
