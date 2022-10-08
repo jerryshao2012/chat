@@ -136,6 +136,7 @@ Your server should be running on port 8081, and you can make API requests agains
 curl -L -X POST http://localhost:3000/api/v1/send -H "Content-Type: application/json" -d "{\"sender\":\"Jerry\",\"content\":\"This is a test from curl\"}"
 ```
 You can use postman to do a POST request as shown below.
+![Postman send request](https://user-images.githubusercontent.com/1479717/194716640-5397cced-4b3f-41f3-b273-08cd0411cbe9.png)
 
 But how do you know the command successfully sent a message to the topic? Right now, you don’t consume messages inside your app, which means you cannot be sure!
 
