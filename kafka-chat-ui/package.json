@@ -1,0 +1,36 @@
+{
+  "name": "kafka-chat-ui",
+  "version": "1.0.0",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "axios": "^0.19.2",
+    "moment": "^2.29.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^3.4.1",
+    "react-stomp": "^5.1.0",
+    "sockjs-client": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8081"
+}

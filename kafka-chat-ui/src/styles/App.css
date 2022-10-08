@@ -1,0 +1,105 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: center;
+}
+
+.App-header {
+  background-color: #262626;
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.messages-list {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 20px 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentUser {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentUser>.Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message>.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGc+CiAgICA8Zz4KICAgICAgPHBhdGggZD0iTTMzMy4xODcsMjM3LjQwNWMzMi43NjEtMjMuODkzLDU0LjA5NS02Mi41NjEsNTQuMDk1LTEwNi4xMjNDMzg3LjI4Miw1OC44OTMsMzI4LjM4OSwwLDI1NiwwIFMxMjQuNzE4LDU4Ljg5MywxMjQuNzE4LDEzMS4yODJjMCw0My41NjIsMjEuMzMzLDgyLjIzLDU0LjA5NSwxMDYuMTIzQzk3LjM3MywyNjguNTcsMzkuMzg1LDM0Ny41MzEsMzkuMzg1LDQzOS43OTUgYzAsMzkuODE0LDMyLjM5MSw3Mi4yMDUsNzIuMjA1LDcyLjIwNUg0MDAuNDFjMzkuODE0LDAsNzIuMjA1LTMyLjM5MSw3Mi4yMDUtNzIuMjA1IEM0NzIuNjE1LDM0Ny41MzEsNDE0LjYyNywyNjguNTcsMzMzLjE4NywyMzcuNDA1eiBNMTY0LjEwMywxMzEuMjgyYzAtNTAuNjcyLDQxLjIyNS05MS44OTcsOTEuODk3LTkxLjg5NyBzOTEuODk3LDQxLjIyNSw5MS44OTcsOTEuODk3UzMwNi42NzIsMjIzLjE4LDI1NiwyMjMuMThTMTY0LjEwMywxODEuOTU0LDE2NC4xMDMsMTMxLjI4MnogTTQwMC40MSw0NzIuNjE1SDExMS41OSBjLTE4LjA5NywwLTMyLjgyLTE0LjcyMy0zMi44Mi0zMi44MjFjMC05Ny43MjYsNzkuNTA0LTE3Ny4yMzEsMTc3LjIzMS0xNzcuMjMxczE3Ny4yMzEsNzkuNTA0LDE3Ny4yMzEsMTc3LjIzMSBDNDMzLjIzMSw0NTcuODkyLDQxOC41MDgsNDcyLjYxNSw0MDAuNDEsNDcyLjYxNXoiIHN0eWxlPSJmaWxsOiByZ2JhKDAsIDAsIDAsIDAuNDYpOyIvPgogICAgPC9nPgogIDwvZz4KICA8Zy8+CiAgPGcvPgogIDxnLz4KICA8Zy8+CiAgPGcvPgogIDxnLz4KICA8Zy8+CiAgPGcvPgogIDxnLz4KICA8Zy8+CiAgPGcvPgogIDxnLz4KICA8Zy8+CiAgPGcvPgogIDxnLz4KPC9zdmc+")
+}
+
+.Message-content>.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Message-content>.table>.username {
+  display: block;
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.Message-content>.table>.timestamp {
+  display: flex;
+  color: gray;
+  font-size: 8px;
+  padding-left: 4px;
+  padding-bottom: 4px;
+  align-items: flex-end;
+}
+
+.Message-content>.text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: rgb(148, 216, 255);
+  color: rgb(90, 90, 90);
+  display: inline-block;
+}
+
+.currentUser>.Message-content .text {
+  background-color: rgb(143, 255, 152);
+}
+
+.message-input {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  margin-bottom: 38px;
+}
+
+.inputField {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid orangered;
+  flex-grow: 1;
+}
+
