@@ -4,7 +4,8 @@ We would create a simple chat page with list of messages and a text field at the
 ## Create React App
 We will use [Create React App](https://github.com/facebook/create-react-app) to quickstart the app.
 
-```
+```![2022-10-08_12-20-18](https://user-images.githubusercontent.com/1479717/194730482-6d80e6d0-0f9d-4639-9e23-7d3ee5299b4d.gif)
+
 npm install --g create-react-app
 create-react-app kafka-chat-ui
 cd kafka-chat-ui
@@ -35,7 +36,7 @@ You will also see any lint errors in the console.
 
 *Copy the CSS style*
 
-Copy the css style from [here](https://raw.githubusercontent.com/jerryshao2012/kafka-chat-app/master/kafka-chat-ui/src/App.css) paste it in the `App.css` file.
+Copy the css style from [here](https://raw.githubusercontent.com/jerryshao2012/chat/master/kafka-chat-ui/src/App.css) paste it in the `App.css` file.
 
 Next add the below changes to `App.js`
 
@@ -208,7 +209,7 @@ We are using SockJS to listen to the messages, which are sent from the server-si
 
 ### SourceCode
 
-You can find the complete source code in my [Github](https://github.com/jerryshao2012/kafka-chat-app) page.
+You can find the complete source code in my [Github](https://github.com/jerryshao2012/chat) page.
 
 ## Other Available Scripts
 
