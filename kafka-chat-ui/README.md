@@ -36,7 +36,7 @@ You will also see any lint errors in the console.
 
 *Copy the CSS style*
 
-Copy the css style from [here](https://raw.githubusercontent.com/jerryshao2012/chat/master/kafka-chat-ui/src/App.css) paste it in the `App.css` file.
+Copy the css style from [here](https://raw.githubusercontent.com/jerryshao2012/chat/master/kafka-chat-ui/src/styles/App.css) paste it in the `App.css` file.
 
 Next add the below changes to `App.js`
 
