@@ -332,7 +332,7 @@ Next, Lets move on to developing the UI part using ReactJS.
 
 ### SourceCode
 
-You can find the complete source code in my [Github](https://github.com/jerryshao2012/kafka-chat-app) page.
+You can find the complete source code in my [Github](https://github.com/jerryshao2012/chat) page.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
