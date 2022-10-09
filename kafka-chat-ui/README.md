@@ -61,6 +61,10 @@ const App = () => {
         console.log("Connected...")
     }
 
+    let onDisconnected = () => {
+        console.log("Disconnected!")
+    }
+
     let onMessageReceived = (msg) => {
         console.log('New message received', msg);
         setMessages(messages.concat(msg));
@@ -70,7 +74,7 @@ const App = () => {
         chatAPI.sendMessage(user.username, msgText).then(res => {
             console.log('Sent', res);
         }).catch(err => {
-            console.log('Error occurred while sending message to api');
+            console.log('Error occurred while sending message to api', err);
         })
     }
 
@@ -93,7 +97,7 @@ const App = () => {
                             url={SOCKET_URL}
                             topics={['/topic/group']}
                             onConnect={onConnected}
-                            onDisconnect={console.log("Disconnected!")}
+                            onDisconnect={onDisconnected}
                             onMessage={msg => onMessageReceived(msg)}
                             debug={true}
                         />
@@ -111,6 +115,7 @@ const App = () => {
 }
 
 export default App;
+
 ```
 Here we are using **SocketJsClient** from `react-stomp` to connect to the WebSocket.
 
