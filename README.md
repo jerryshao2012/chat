@@ -83,7 +83,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic kafka-chat
 ```
 bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka-chat
 ```
-###Kafka Architecture Concepts:
+### Kafka Architecture Concepts:
 
 1. **Topic —** It is a logical data unit and identified by its name. It can have any type of message format. Topics are split into **partitions**. Messages with each partition are ordered. Each message with in a partition gets an incremental id called an **offset**.
 
