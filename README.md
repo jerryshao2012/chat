@@ -7,7 +7,7 @@ This project is just for learning purposes. It doesn't contain a production-read
 ## The Architecture Diagram of the Realtime Chat application
 To understand how the building blocks work, let's first take a look of the Architecture Diagram of the Realtime Chat application:
 
-![Chat Architecture Diagram](https://user-images.githubusercontent.com/1479717/194716524-528cd3df-68d5-4478-9cad-d04275dd0cc5.png)
+![Kafka Chat Architecture Diagram](https://user-images.githubusercontent.com/1479717/194785449-b18576b5-7baf-4e82-be32-f574c66e0dec.png)
 
 ## What is Kafka
 Apache Kafka is a widely popular distributed messaging system that provides a fast, distributed, highly scalable, highly available, publish-subscribe messaging system.
@@ -68,20 +68,35 @@ After running Zookeeper and Apache Kafka respectively, We can create a Topic and
 ```
 kafka-topics --create --topic kafka-chat --zookeeper localhost:2181 --replication-factor 1 --partitions 1
 ```
-* Shell script for Windows:
+* Shell script for Windows through Kafka Console:
 ```
 bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic kafka-chat
 ```
 Here we are creating a topic `kafka-chat` to handle chat messages. We would be using this topic later in the chat application.
 
 ##### *Consume the topic (optional: to test)*
-* Shell script for Linux:
+* Shell script for Linux through Kafka Console:
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic kafka-chat
 ```
-* Shell script for Windows:
+* Shell script for Windows through Kafka Console:
 ```
 bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka-chat
 ```
+###Kafka Architecture Concepts:
 
-Now, Let's write some code starting from backend.
+1. **Topic —** It is a logical data unit and identified by its name. It can have any type of message format. Topics are split into **partitions**. Messages with each partition are ordered. Each message with in a partition gets an incremental id called an **offset**.
+
+*Note — Kafka topics are immutable, so once the data is written to a partition, it can’t be modified. The order of messages is guaranteed with in a partition only.*
+
+2. **Producers —** They write data to the topics. They know on which partition they have to write the data. They can also send a **key** along with the message.
+
+*Note — If the key is null, then the messages go to partitions in a round robin approach. If the key is not null, then all the messages with a particular key go to the defined partitioned.*
+
+3. **Consumers —** They read data from a topic. They pull messages. A consumer can read from more than one partition in a topic. Data is read from a topic in the order they are in it..
+
+*Note — We need to mention the format of messages at the consumers.*
+
+4. **Consumer group —** When there are more than one consumer in our application, they read data as a group which is called consumer group. It completely possible that we have more numbers of consumers than we have partitions. In such scenarios those extra consumers will sit idle.
+
+*Now, Let's write some code starting from backend.
