@@ -1,3 +1,3 @@
 export function randomColor() {
-    return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16).padEnd(6, '0');
 }
